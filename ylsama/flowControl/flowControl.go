@@ -3,6 +3,7 @@ package main
 func main() {
 	ifElseFlow()
 	stwichFlow()
+	forFlow()
 }
 
 func ifElseFlow() {
@@ -28,4 +29,14 @@ func stwichFlow() {
 	case 3:
 		println("Number is 3")
 	}
+}
+
+func forFlow() {
+	var (
+		tmp int8 = 0
+	)
+	for i := 0; i < 10; i++ {
+		tmp++
+	}
+	println(tmp)
 }
