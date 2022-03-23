@@ -1,0 +1,42 @@
+# Function
+Functions can call other (or self) functions
+
+```go
+func [function_name] (param1 type, param2 type...) (returned type1, returned type2...) {
+ //Function body
+}
+```
+example 1 (no return type)
+```go
+func hello(message string) {
+ fmt.Printf("Hello %s\n", message)
+ return nil
+}
+```
+example 2 (with return type)
+```go
+func hello(x int8) int8 { return x + 7 }
+```
+
+# Anonymous function: 
+assigned function to a variable
+```go
+func main(){
+ add := func(m int){ return m+1 }
+ result := add(6)
+ //1 + 6 must print 7
+ println(result)
+}
+```
+# closures
+```go
+func main(){
+    addn := func(m int){
+        return func(n int){ return m+n }
+    }
+    addfive := addn(5)
+    addsix := addn(6)
+    println(addfive(2))
+    println(addsix(1))
+}
+```

@@ -1,4 +1,4 @@
-basic type
+# basic type
 bool
 string
 int  int8  int16  int32  int64
@@ -27,13 +27,53 @@ func main() {
 	fmt.Printf("Type: %T Value: %v\n", z, z)
 }
 ```
-array 
-slice type
+# array 
+```go
+arrayVar1 := [8]int8{0, 1,2,3,4,..}
+arrayVar2 [8]int8 := [8]int8{0, 1,2,3,4,..}
+```
+# slice type
 
-objects that are composed of another objects or types.
-pointers 
+# objects
+Composed of another objects or types.
 
-functions 
+# pointers 
+
+# functions 
 define functions as variables and pass them to other functions
+## Anonymous function: assigned function to a variable
+```go
+func main(){
+ add := func(m int){ return m+1 }
+ result := add(6)
+ println(result)
+}
+```
+## Closures:
+A closure is a function value that references variables from outside its body. 
 
-interface 
+The function may access and assign to the referenced variables; 
+in this sense the function is "bound" to the variables.
+
+For example, the adder function returns a closure. Each closure is bound to its own sum variable.
+```go
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
+func main() {
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+			neg(-2*i),
+		)
+	}
+}
+```
+
+# interface 
