@@ -17,6 +17,14 @@ example 2 (with return type)
 ```go
 func hello(x int8) int8 { return x + 7 }
 ```
+example 3 (with return variable)
+```go
+func doesReturnError(arg1 int) (x int, err error) {
+	x = arg1 + 10 //already declare
+	err = errors.New("this function simply returns an error")
+	return //no need to specify the return x, err
+}
+```
 
 # Anonymous function: 
 assigned function to a variable
