@@ -17,7 +17,8 @@ func main() {
 ```bash
 go mod init ylsama/hello_world
 go run main.go
-go build -o hello_world
+# go build -o hello_world
+go install
 ./hello_world
 ```
 
