@@ -7,18 +7,18 @@ func [function_name] (param1 type, param2 type...) (returned type1, returned typ
  //Function body
 }
 ```
-1. example 1 (no return type)
+### 1. example 1 (no return type)
 ```go
 func hello(message string) {
  fmt.Printf("Hello %s\n", message)
  return nil
 }
 ```
-2. example 2 (with return type)
+### 2. example 2 (with return type)
 ```go
 func hello(x int8) int8 { return x + 7 }
 ```
-3. example 3 (with return variable)
+### 3. example 3 (with return variable) Naming returned types
 ```go
 func doesReturnError(arg1 int) (x int, err error) {
 	x = arg1 + 10 //already declare
