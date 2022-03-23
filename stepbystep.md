@@ -1,9 +1,9 @@
-```sg
+```bash
 mkdir ylsama
 cd ylsama
 mkdir hello_world
 ```
-```sh
+```bash
 lvim main.go
 ```
 
@@ -14,7 +14,7 @@ func main() {
 	println("Hello World!")
 }
 ```
-```
+```bash
 git init
 gh auth login
 gh auth login < token.txt
