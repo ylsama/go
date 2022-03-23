@@ -1,6 +1,11 @@
 package main
 
 func main() {
+	ifElseFlow()
+	stwichFlow()
+}
+
+func ifElseFlow() {
 	ten := 10 //inferred
 	if ten == 20 {
 		println("This shouldn't be printed as 10 isn't equal to 20")
@@ -8,5 +13,19 @@ func main() {
 		println("This isn't print because previous condition was satisfied")
 	} else {
 		println("In case no condition is satisfied, print this")
+	}
+}
+
+func stwichFlow() {
+	var (
+		number int8 = 3
+	)
+	switch number {
+	case 1:
+		println("Number is 1")
+	case 2:
+		println("Number is 2")
+	case 3:
+		println("Number is 3")
 	}
 }
