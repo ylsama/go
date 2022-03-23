@@ -1,23 +1,24 @@
 # Function
 Functions can call other (or self) functions
 
+## Boilderplate function
 ```go
 func [function_name] (param1 type, param2 type...) (returned type1, returned type2...) {
  //Function body
 }
 ```
-example 1 (no return type)
+1. example 1 (no return type)
 ```go
 func hello(message string) {
  fmt.Printf("Hello %s\n", message)
  return nil
 }
 ```
-example 2 (with return type)
+2. example 2 (with return type)
 ```go
 func hello(x int8) int8 { return x + 7 }
 ```
-example 3 (with return variable)
+3. example 3 (with return variable)
 ```go
 func doesReturnError(arg1 int) (x int, err error) {
 	x = arg1 + 10 //already declare
@@ -25,8 +26,17 @@ func doesReturnError(arg1 int) (x int, err error) {
 	return //no need to specify the return x, err
 }
 ```
-
-# Anonymous function: 
+## Function with undetermined number of parameters
+```go
+func sum(args ...int) (result int) {
+    for _, v := range args {
+        result += v
+    }
+    return
+}
+```
+# Function as variable value: 
+## Anonymous function: 
 assigned function to a variable
 ```go
 func main(){
@@ -36,6 +46,7 @@ func main(){
  println(result)
 }
 ```
+
 # closures
 ```go
 func main(){
