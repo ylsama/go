@@ -46,6 +46,6 @@ func arrayVariable() {
 		a [6]int8 = [6]int8{1, 2, 3, 4, 5, 6} //array
 	)
 	b := [LENGTH]int8{1, 2}
-	fmt.Printf("Type: %T Value: %v\n", a, len(a))
+	fmt.Printf("Type: %T Value: %v Length: %v\n", a, a, len(a))
 	fmt.Printf("Type: %T %T %T Value: %v %v %v\n", b, b[0], b[1], b, b[0], b[1])
 }
