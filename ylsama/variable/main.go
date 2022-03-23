@@ -16,7 +16,7 @@ func main() {
 	// example of var block placement can be inside main func scope
 	var (
 		explicit string = "Hello, I'm a explicitly declared variable"
-		inferred        = "Hello, I'm a explicitly declared variable"
+		inferred        = "Hello, I'm a variable"
 	)
 	fmt.Printf("Type: %T Value: %v\n", toBe, toBe)
 	fmt.Printf("Type: %T Value: %v\n", maxInt, maxInt)
