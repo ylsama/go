@@ -1,9 +1,9 @@
+make dir first hello_word
 ```bash
 mkdir ylsama
 cd ylsama
 mkdir hello_world
-```
-```bash
+cd hello_word
 lvim main.go
 ```
 
@@ -15,9 +15,10 @@ func main() {
 }
 ```
 ```bash
-git init
-gh auth login
-gh auth login < token.txt
-gh git create
+go mod init ylsama/hello_world
+go run main.go
+go build -o hello_world
+./hello_world
 ```
+
 
